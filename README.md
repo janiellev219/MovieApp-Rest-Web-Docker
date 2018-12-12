@@ -11,3 +11,5 @@ to implement a database and a docker as well.
 Please follow how to run an NPM instructions when starting this app. You will also notice within our code our image is from online.
 
 Do take the time to look over all of the code as certain functions may not work if not named correctly. 
+
+The presentation for this final project is also attached in this file so you may see some details on the JSON output of what information is stored in our database.
