@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  h1= 'Movie List'
+  
+
+  // Wrapper
+  #wrapper
+
+    // USER INFO
+    #userInfo
+      h2 Movie Info
+      p
+        strong Movie:
+        |  <span id='userInfoName'></span>
+        br
+        strong Screentime:
+        |  <span id='userInfoAge'></span>
+        br
+        strong Director:
+        |  <span id='userInfoLocation'></span>
+        br
+        strong Opinion:
+        |  <span id='userInfoGender'></span>
+    // /USER INFO
+
+    // USER LIST
+    h2 Movie List
+    #userList
+      table
+        thead
+          th ID
+          th UserName
+          th Delete
+        tbody
+    // /USER LIST
+
+    /// ADD USER
+    h2 Add Movie Information
+    #addUser
+      fieldset
+        input#inputUserName(type='text', placeholder='ID #')
+        input#inputUserEmail(type='text', placeholder='Username')
+        br
+        input#inputUserFullname(type='text', placeholder='Movie Name')
+        input#inputUserAge(type='text', placeholder='Runtime')
+        br
+        input#inputUserLocation(type='text', placeholder='Director')
+        input#inputUserGender(type='text', placeholder='Opinion')
+        br
+        button#btnAddUser Add Movie
+    // /ADD USER
+
+  // /WRAPPER
+
+
