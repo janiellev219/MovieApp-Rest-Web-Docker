@@ -13,3 +13,5 @@ Please follow how to run an NPM instructions when starting this app. You will al
 Do take the time to look over all of the code as certain functions may not work if not named correctly. 
 
 The presentation for this final project is also attached in this file so you may see some details on the JSON output of what information is stored in our database.
+
+This was a class project and I had gotten assistance from this cite https://closebrace.com/tutorials/2017-03-02/creating-a-simple-restful-web-app-with-nodejs-express-and-mongodb.
