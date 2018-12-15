@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1= 'Movie List'
+  h1= 'Movies By You'
   
 
   // Wrapper
@@ -12,25 +12,29 @@ block content
       h2 Movie Info
       p
         strong Movie:
-        |  <span id='userInfoName'></span>
+        |  <span id='userInfoMovieName'></span>
+        br
         br
         strong Screentime:
-        |  <span id='userInfoAge'></span>
+        |  <span id='userInfoRuntime'></span>
+        br
         br
         strong Director:
-        |  <span id='userInfoLocation'></span>
+        |  <span id='userInfoDirector'></span>
+        br
         br
         strong Opinion:
-        |  <span id='userInfoGender'></span>
+        |  <span id='userInfoOpinion'></span>
     // /USER INFO
 
     // USER LIST
-    h2 Movie List
+    h2 User Input
     #userList
       table
         thead
-          th ID
-          th UserName
+          th Username
+          th Rate out of 10
+          th Movie Name
           th Delete
         tbody
     // /USER LIST
@@ -39,14 +43,20 @@ block content
     h2 Add Movie Information
     #addUser
       fieldset
-        input#inputUserName(type='text', placeholder='ID #')
-        input#inputUserEmail(type='text', placeholder='Username')
+        input#inputUserName(type='text', placeholder='UserName')
+        
+        input#inputUserRating(type='text', placeholder='Rating')
         br
-        input#inputUserFullname(type='text', placeholder='Movie Name')
-        input#inputUserAge(type='text', placeholder='Runtime')
         br
-        input#inputUserLocation(type='text', placeholder='Director')
-        input#inputUserGender(type='text', placeholder='Opinion')
+        input#inputUserMoviename(type='text', placeholder='Movie Name')
+        
+        input#inputUserRuntime(type='text', placeholder='Runtime')
+        br
+        br
+        input#inputUserDirector(type='text', placeholder='Director') 
+      
+        input#inputUserOpinion(type='text', placeholder='Opinion')
+        br
         br
         button#btnAddUser Add Movie
     // /ADD USER

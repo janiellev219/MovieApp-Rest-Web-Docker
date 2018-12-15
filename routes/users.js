@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET userlist. */
-router.get('/userlist', function(req, res) {
+router.get('/userlist/', function(req, res) {
   var db = req.db;
   var collection = db.get('userlist');
   collection.find({},{},function(e,docs){
@@ -28,6 +28,17 @@ router.delete('/deleteuser/:id', function(req, res) {
   var userToDelete = req.params.id;
   collection.remove({ '_id' : userToDelete }, function(err) {
     res.send((err === null) ? { msg: '' } : { msg:'error: ' + err });
+  });
+});
+
+router.get('/userlist/:id',function(req,res) 
+{
+  var db = req.db;
+  var id = req.params.id;
+
+  var collection = id.get('userlist');
+  collection.find(showUserInfo,function(e,docs){
+  res.json(docs)
   });
 });
 

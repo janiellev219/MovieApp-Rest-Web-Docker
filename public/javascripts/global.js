@@ -36,7 +36,8 @@ userListData = data;
     $.each(data, function(){
       tableContent += '<tr>';
       tableContent += '<td><a href="#" class="linkshowuser" rel="' + this.username + '">' + this.username + '</a></td>';
-      tableContent += '<td>' + this.email + '</td>';
+      tableContent += '<td>' + this.rating + '</td>';
+      tableContent += '<td>' + this.moviename + '</td>';
       tableContent += '<td><a href="#" class="linkdeleteuser" rel="' + this._id + '">delete</a></td>';
       tableContent += '</tr>';
     });
@@ -62,10 +63,10 @@ function showUserInfo(event) {
    var thisUserObject = userListData[arrayPosition];
 
    //Populate Info Box
-   $('#userInfoName').text(thisUserObject.fullname);
-   $('#userInfoAge').text(thisUserObject.age);
-   $('#userInfoGender').text(thisUserObject.gender);
-   $('#userInfoLocation').text(thisUserObject.location);
+   $('#userInfoMovieName').text(thisUserObject.moviename);
+   $('#userInfoRuntime').text(thisUserObject.runtime);
+   $('#userInfoOpinion').text(thisUserObject.opinion);
+   $('#userInfoDirector').text(thisUserObject.director);
  
  };
  // Add User
@@ -84,11 +85,11 @@ function addUser(event) {
     // If it is, compile all user info into one object
     var newUser = {
       'username': $('#addUser fieldset input#inputUserName').val(),
-      'email': $('#addUser fieldset input#inputUserEmail').val(),
-      'fullname': $('#addUser fieldset input#inputUserFullname').val(),
-      'age': $('#addUser fieldset input#inputUserAge').val(),
-      'location': $('#addUser fieldset input#inputUserLocation').val(),
-      'gender': $('#addUser fieldset input#inputUserGender').val()
+      'rating': $('#addUser fieldset input#inputUserRating').val(),
+      'moviename': $('#addUser fieldset input#inputUserMoviename').val(),
+      'runtime': $('#addUser fieldset input#inputUserRuntime').val(),
+      'director': $('#addUser fieldset input#inputUserDirector').val(),
+      'opinion': $('#addUser fieldset input#inputUserOpinion').val()
     }
 
     // Use AJAX to post the object to our adduser service
